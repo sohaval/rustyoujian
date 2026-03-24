@@ -1,0 +1,30 @@
+[package]
+name = "right-click-manager-native"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "right-click-manager-native"
+path = "src/main.rs"
+
+[profile.release]
+strip = true
+lto = true
+
+[target.'cfg(windows)'.release]
+rustflags = ["-C", "link-args=/SUBSYSTEM:WINDOWS /ENTRY:mainCRTStartup"]
+
+[dependencies]
+windows = { version = "0.54.0", features = [
+    "Win32_Foundation",
+    "Win32_System_Registry",
+    "Win32_System_LibraryLoader",
+    "Win32_System_Threading",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_UI_Controls",
+    "Win32_UI_Shell",
+    "Win32_Security",
+    "Win32_System_Com",
+    "Win32_System_SystemServices",
+    "Win32_Graphics_Gdi",
+] }
