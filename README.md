@@ -139,8 +139,8 @@ right-click-manager/
 
 ## 联系方式
 
-- 项目主页：https://github.com/yourusername/right-click-manager
-- 问题反馈：https://github.com/yourusername/right-click-manager/issues
+- 项目主页：https://github.com/sohaval/right-click-manager
+- 问题反馈：https://github.com/sohaval/right-click-manager/issues
 
 ---
 
